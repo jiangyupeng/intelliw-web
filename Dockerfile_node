@@ -1,0 +1,19 @@
+FROM node:9.6-alpine
+
+MAINTAINER yupeng jiangyupeng@gmail.com
+
+RUN apt-get update && apt-get -y install
+
+ADD . /app/
+WORKDIR /app
+
+RUN npm install -g git
+RUN npm install
+RUN npm rebulid node-sass --force
+
+ENV HOST 0.0.0.0
+ENV PORT 4288
+
+EXPOSE 4288
+
+CMD ["npm", "start"]

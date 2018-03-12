@@ -1,0 +1,14 @@
+{
+  "/api": {
+    "target": "http://localhost:9088",
+    "secure": "false",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/oauth": {
+    "target": "http://127.0.0.1:9088",
+    "secure": "false",
+    "changeOrigin": true
+  }
+}

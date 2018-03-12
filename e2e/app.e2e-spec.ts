@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('tt App', () => {
+describe('intelliw-api App', () => {
   let page: AppPage;
 
   beforeEach(() => {

@@ -1,0 +1,118 @@
+<header id="header" class="animated fadeInDown">
+
+  <div id="logo-group">
+    <span id="logo"> <img src="assets/img/logo.png" alt="Ti Admin"> </span>
+  </div>
+
+  <span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span> <a
+    routerLink="/auth/register" class="btn btn-danger">创建账户</a> </span>
+
+</header>
+<div id="main" role="main" class="animated fadeInDown">
+
+  <div id="content" class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+        <h1 class="txt-color-red login-header-big">顶智管理后台</h1>
+
+        <div class="hero">
+          <div class="pull-left login-desc-box-l">
+            <h4 class="paragraph-header">段落开头</h4>
+
+            <!--<div class="login-app-icons">-->
+            <!--<a routerLink="/dashboard/analytics" class="btn btn-danger btn-sm">Frontend Template</a>-->
+            <!--<a routerLink="/tiadmin/app-layouts" class="btn btn-danger btn-sm">Find out more</a>-->
+            <!--</div>-->
+          </div>
+          <img src="assets/img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h5 class="about-heading">关于我们 - 你需要了解更多</h5>
+
+            <p>
+              关于我们的具体内容
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!--<h5 class="about-heading">Not just your average template!</h5>-->
+
+            <!--<p>-->
+            <!--Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta-->
+            <!--nobis est eligendi voluptatem accusantium!-->
+            <!--</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+        <div class="well no-padding">
+          <!--<form #f="ngForm" class="smart-form client-form" (ngSubmit)="onSubmit(f)">-->
+          <form [formGroup]="form" class="smart-form client-form" (ngSubmit)="onSubmit()">
+            <header>
+              登录
+            </header>
+            <fieldset>
+              <section>
+                <label class="label">登录账户</label>
+                <label class="input"> <i class="icon-append fa fa-user"></i>
+                  <!--<input type="text" name="username" [(ngModel)]="username" -->
+                         <!--placeholder="请输入用户名" -->
+                         <!--data-ti-validate-input="" -->
+                         <!--data-required=""-->
+                         <!--data-message-required="请输入用户名">-->
+                  <input type="text" required
+                         formControlName="Username"
+                         placeholder="请输入用户名" />
+                  <!--<input type="text" name="username" #username="ngModel" data-ti-validate-input="" data-required=""-->
+                  <!--data-message-required="请输入用户名">-->
+                  <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i>
+                    请输入登录账户</b></label>
+              </section>
+              <section>
+                <label class="label">登录密码</label>
+                <label class="input"> <i class="icon-append fa fa-lock"></i>
+                  <!--<input type="password" name="password" [(ngModel)]="password" -->
+                         <!--placeholder="请输入登录密码" -->
+                         <!--data-ti-validate-input="" -->
+                         <!--data-required="" -->
+                         <!--data-minlength="3"-->
+                         <!--data-maxnlength="20" -->
+                         <!--data-message="请输入登录密码">-->
+                  <input type="password" required
+                         formControlName="Password"
+                         placeholder="请输入登录密码" />
+                  <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> 输入登录密码</b> </label>
+
+                <div class="note">
+                  <a routerLink="/auth/forgot-password">忘记密码？</a>
+                </div>
+              </section>
+              <section>
+                <label class="checkbox">
+                  <input type="checkbox" name="remember" checked>
+                  <i></i>保持登录</label>
+              </section>
+            </fieldset>
+            <footer>
+              <!--<button (click)="login($event)" class="btn btn-primary">登录</button>-->
+              <button type="submit" class="btn btn-primary"
+                      [disabled]="form.invalid">登录</button>
+            </footer>
+          </form>
+        </div>
+        <!--<h5 class="text-center"> - Or sign in using -</h5>-->
+        <!--<ul class="list-inline text-center">-->
+        <!--<li>-->
+        <!--<a (click)="(null)" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a (click)="(null)" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a (click)="(null)" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>-->
+        <!--</li>-->
+        <!--</ul>-->
+      </div>
+    </div>
+  </div>
+</div>
