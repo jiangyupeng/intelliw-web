@@ -16,6 +16,7 @@ import {TiadminLayoutModule} from './shared/layout/layout.module';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {httpInterceptorProviders} from './interceptor';
 import {OauthService} from './+auth/oauth.service';
+import {HomeComponent} from './+home/home.component';
 
 
 // Application wide providers
@@ -32,7 +33,7 @@ type StoreType = {
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
